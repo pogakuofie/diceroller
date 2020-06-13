@@ -19,7 +19,17 @@ class MainActivity : AppCompatActivity() {
         var reset = false
 
         binding.rollButton.setOnClickListener() {
-            binding.message.text = (1..6).random().toString()
+
+            val numberImage = when ((1..6).random()) {
+                1 -> R.drawable.dice_1
+                2 -> R.drawable.dice_2
+                3 -> R.drawable.dice_3
+                4 -> R.drawable.dice_4
+                5 -> R.drawable.dice_5
+                6 -> R.drawable.dice_6
+                else -> R.drawable.dice_1
+            }
+            binding.dice.setImageResource(numberImage)
         }
     }
 }
