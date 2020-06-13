@@ -16,8 +16,6 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        var reset = false
-
         binding.rollButton.setOnClickListener() {
 
             val numberImage = when ((1..6).random()) {
